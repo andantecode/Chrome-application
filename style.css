@@ -1,41 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Lugrasimo&family=Metal&display=swap&family=Nanum+Gothic&display=swap');
+
+* {
+    font-family: "Google Sans Code", "Nanum Gothic", monospace, sans-serif;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    font-size: 18px;
+}
+
 .hidden {
     display: none;
 }
 
 body img {
     position: fixed;
-    top: 0;     /* position from top corner , use with position: fixed */ 
+    top: 0;
     left: 0;
-    width: 100vw;   /* viewport width (%) */
-    height: 100vh;   /* viewport height (%) */
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
-    z-index: -1;    /* stacking order: send to badk */
-    opacity: 0.7;
+    z-index: -1;
+    opacity: 0.6;
 }
 
 body {
-    display: flex;      /* enable flexbox layout */
+    display: flex;
     flex-direction: column;
     align-items: center;
+    quotes: flex-end;
 }
 
 input {
     /* size */
     width: 200px;
     padding: 12px 15px;
-    
+
     /* border */
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 0;
+
     /* text */
     font-size: 14px;
-    color: black;
-    
+    color: white;
+
     /* background */
-    background-color: rgba(0, 0, 0, 0.5);
-    
+    background-color: transparent;
+
     /* others */
     outline: none;
+}
+
+.todoinput {
+    width: 400px;
+}
+
+input::placeholder {
+    color: beige;
+}
+
+h1 {
+    /* greeting */
+    font-size: 60px;
 
 }
+
+h2 {
+    /* clock */
+    font-size: 40px;
+}
+
+.weather {
+    margin-bottom: 20px;
+}
+
+form {
+    /* login form */
+    padding: 16px;
+    background-color: transparent;
+    border: none;
+}
+
+.loginBtn {
+    padding: auto 5px;
+    width: 140px;
+}
+
+/* middle section layout */
+.middle-section {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    gap: 40px;
+    margin-top: 50px;
+    align-items: flex-start;
+}
+
+.left-section {
+    flex: 0.9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 400px;
+    height: 460px;
+    border-radius: 1%;
+    padding: 10px 8px;
+    line-height: 1.8;
+    background-color: rgba(56, 54, 50, 0.397);
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 0;
+    margin-left: 15px;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.checkbtn {
+    border: 1px dotted white;
+    background-color: transparent;
+    color: red;
+    font-size: larger;
+    margin-right: 10px;
+    padding: 3px;
+    width: 20px;
+    height: 20px;   /* 정사각형 크기 */
+    display: inline-flex;   /*  flexbox로 내부 콘텐츠 중앙 정렬 */
+    align-items: center;
+    justify-content: center;    /* 체크 이모지 중앙 배치 */
+}
+
+/* quote */
+.quote {
+    position: fixed;
+    bottom: 20px;
+}
+
+.quote * {
+    /* .quote-child */
+    font-family: "Metal", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: large;
+}
+
+.quote span:first-child {
+    font-size: 30px;
+}
+
+.quote span:last-child {
+    display: block;
+    text-align: right;
+}
+
