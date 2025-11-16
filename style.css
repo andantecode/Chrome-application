@@ -214,6 +214,15 @@ li:hover {
     transform: scale(0.95);
 }
 
+/* Todo text styling */
+.todo-text {
+    font-size: 14px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    flex: 1;
+    word-break: break-word;
+}
+
 /* quote */
 .quote {
     position: fixed;
